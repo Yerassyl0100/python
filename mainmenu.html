@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>43 avenue</title>
+    <link rel="shortcut icon" type="image/png" href="circle.png">
+    <link rel="stylesheet" href="stylenew.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        <div class="topnav">
+            <a class="active" href="mainmenu.html">Home</a>
+            <a href="secondlist.html">About</a>
+            <a href="#contact" onclick="smoothScroll">Contact</a>
+            <div class="logo">
+                <div class="logotext">
+                    <img src="circle.png" alt="">
+                    <span class="title">43</span>
+                    <span class="title2">AVENUE</span>
+                </div>
+            </div>
+        </div>
+        <audio controls autoplay>
+            <source src="tokyo-rain.mp3" type="audio/mpeg">
+        </audio>
+        <div class="space">
+            <div class="low-title">
+                <div>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="https://abokado.kz/wp-content/uploads/2022/01/331A1715.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="https://abokado.kz/wp-content/uploads/2022/01/331A1719.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="https://img.restoclub.ru/uploads/article/d/8/4/4/d844303e341a8a4e23ca39e4ee284a54_w828_h552--big.jpg"
+                                 style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="callout" style="position: absolute; ">
+                <div class="callout-header">Hi</div>
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <div class="callout-container">
+                    <p>You can add client's discount as permanent user <a href="#">Learn more</a> or close it if it is
+                        in your way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="unknown" id="hide">
+        <div class="knopka">
+            <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="menu-header">
+            <button class="menu-button" onclick="toggleMenu()">Суши</button>
+            <hr class="my-line">
+        </div>
+        <div class="menu" id="menu">
+            <div class="line">
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <div>
+                                    <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/filadelfiya-lajt.png"
+                                         alt="image" class="img-proj">
+                                </div>
+                                <h3>Ролл Филадельфия</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Филадельфия</h3>
+                                    <span class="price">4321 тг.</span>
+                                    <p>Лосось, сливочный сыр, огурец, авокадо, нори.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/drakon-1.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Дракон</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Дракон</h3>
+                                    <span class="price">5278 тг.</span>
+                                    <p>Креветки, авокадо, тунец, огурец, нори.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/kaliforniya-tempura.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Калифорния</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Калифорния</h3>
+                                    <span class="price">4312 тг.</span>
+                                    <p>Крабовое мясо, авокадо, огурец, нори.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2022/08/czezar-maki-size-light.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Цезарь</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Цезарь</h3>
+                                    <p>Куриное филе, салат айсберг, сливочный сыр, нори.</p>
+                                    <span class="price">3356 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/yagami-maki.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Ясай</h3>
+
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Ясай</h3>
+                                    <p>Авокадо, огурец, морковь, паприка, нори.</p>
+                                    <span class="price">6721 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/tokio.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Шахерезада</h3>
+
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Шахерезада</h3>
+                                    <p>Тунец, кунжут, соус унаги, огурец, нори.</p>
+                                    <span class="price">6876 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <!-- Содержимое лицевой стороны -->
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/tehas.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Юдзу</h3>
+
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Юдзу</h3>
+                                    <p>Лосось, сливочный сыр, кунжут, нори.</p>
+                                    <span class="price">5567 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/ebi-kranch-maki.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Темпура</h3>
+
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Темпура</h3>
+                                    <p>Креветки, огурец, соус унаги, нори.</p>
+                                    <span class="price">6579 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <!-- Содержимое лицевой стороны -->
+                                <img src="https://dve-palochky.kz/wp-content/uploads/2020/05/planeta-maki.png"
+                                     alt="image" class="img-proj">
+                                <h3>Ролл Футо Маки</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Ролл Футо Маки</h3>
+                                    <p>Лосось, креветки, огурец, авокадо, нори.</p>
+                                    <span class="price">6599 тг.</span>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="menu-header">
+            <button class="menu-button" onclick="toggleMenuu()">Сеты</button>
+            <hr class="my-line">
+        </div>
+        <div class="menu" id="menu1">
+            <div class="line">
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://imgs.sayasushi.kz/xl/4e9d8986-e838-4c9e-a057-03bff6030102.webp"
+                                     alt="Сет 1" class="img-proj">
+                                <h3>Сет 1</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Сет 1</h3>
+                                    <span class="price">15 000 тг.</span>
+                                    <p>6 штук суши: лосось, тунец, креветка, авокадо, огурец и угорь.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://imgs.sayasushi.kz/xl/0f09ecab-868b-4418-b320-344615f32526.webp"
+                                     alt="Сет 2" class="img-proj">
+                                <h3>Сет 2</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Сет 2</h3>
+                                    <span class="price">22 000 тг.</span>
+                                    <p>8 штук суши: лосось, тунец, желтохвостая рыба, креветка, авокадо, огурец, угорь и
+                                        краб.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front-face">
+                                <img src="https://imgs.sayasushi.kz/xl/8498569c-5a57-4228-9fe6-3f96a690de03.webp"
+                                     alt="Сет 3" class="img-proj">
+                                <h3>Сет 3</h3>
+                                <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                            </div>
+                            <div class="back-face">
+                                <div class="back-container">
+                                    <h3>Сет 3</h3>
+                                    <span class="price">12 500 тг.</span>
+                                    <p>10 штук суши: тунец, лосось, желтохвостая рыба, креветка, авокадо, огурец, угорь,
+                                        краб, осьминог и тамаго.</p>
+                                </div>
+                                <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                </button>
+                                <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/dd64cc94-157c-4788-9093-7c4c4ccc0340.webp"
+                                         alt="Сет 4" class="img-proj">
+                                    <h3>Сет 4</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 4</h3>
+                                        <span class="price">28 000 тг.</span>
+                                        <p>12 штук суши: лосось, тунец, желтохвостая рыба, креветка, угорь, краб,
+                                            осьминог, тамаго, авокадо, огурец, острый тунец и ролл Филадельфия.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/d5723ab8-c989-4087-be0b-b22a73837850.webp"
+                                         alt="Сет 5" class="img-proj">
+                                    <h3>Сет 5</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 5</h3>
+                                        <span class="price">20 500 тг.</span>
+                                        <p>8 штук суши: лосось, тунец, креветка, угорь, краб, авокадо, огурец и острый
+                                            лосось.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/24fa2538-d7ed-4797-bbf1-e7cbce282ca6.webp"
+                                         alt="Сет 6" class="img-proj">
+                                    <h3>Сет 6</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 6</h3>
+                                        <span class="price">17 500 тг.</span>
+                                        <p>6 штук суши: тунец, креветка, авокадо, огурец, угорь и ролл Калифорния.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/e6bde0e0-c775-4da4-85b1-ece905543bb9.webp"
+                                         alt="Сет 7" class="img-proj">
+                                    <h3>Сет 7</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 7</h3>
+                                        <span class="price">25 000 тг.</span>
+                                        <p>10 штук суши: лосось, тунец, желтохвостая рыба, креветка, авокадо, огурец,
+                                            угорь, краб, осьминог и ролл Филадельфия.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/56060108-6c42-4325-babc-e0ea4152f220.webp"
+                                         alt="Сет 8" class="img-proj">
+                                    <h3>Сет 8</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 8</h3>
+                                        <span class="price">30 000 тг.</span>
+                                        <p>12 штук суши: лосось, тунец, желтохвостая рыба, креветка, угорь, краб,
+                                            осьминог, тамаго, авокадо, огурец, острый тунец и ролл Филадельфия.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" onmouseover="menuHover(this)" onmouseout="menuOut(this)">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front-face">
+                                    <img src="https://imgs.sayasushi.kz/xl/f1a5e579-0624-42e4-b817-115774ab82fa.webp"
+                                         alt="Сет 9" class="img-proj">
+                                    <h3>Сет 9</h3>
+                                    <button class="specBtn" onclick="flipElement(this)">Далее</button>
+                                </div>
+                                <div class="back-face">
+                                    <div class="back-container">
+                                        <h3>Сет 9</h3>
+                                        <span class="price">14 500 тг.</span>
+                                        <p>8 штук суши: лосось, тунец, креветка, угорь, краб, авокадо, огурец и острый
+                                            лосось.</p>
+                                    </div>
+                                    <button class="specBtn" onclick="window.location.href='order.html'">Заказать
+                                    </button>
+                                    <button class="specBtn" onclick="flipElement(this)">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lowest">
+            <div class="links" id="contact">
+                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="https://twitter.com" class="fa fa-twitter"></a>
+                <a href="https://www.google.com" class="fa fa-google"></a>
+                <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+                <a href="https://www.youtube.com" class="fa fa-youtube"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                <a href="https://telegram.org" class="fa fa-telegram"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

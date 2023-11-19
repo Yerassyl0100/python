@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>43 AVENUE</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #04AA6D;
+            width: 0%;
+        }
+
+        .content {
+            padding: 100px 0;
+            margin: 50px auto 0 auto;
+            width: 80%;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 10%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logotext{
+            font-size: 500%;
+        }
+        .title{
+            color: crimson;
+            padding-right: -70px;
+        }
+        .title2{
+            color: aliceblue;
+            padding-left: -70px;
+
+        }
+        .all{
+            background-size: cover;
+            background: black;
+            height: 100%; /* Добавлено */
+            width: 100%; /* Добавлено */
+        }
+        .head{
+            margin-bottom: 100px;
+        }
+        .qwe{
+            padding-top: 222px;
+            color: white;
+        }
+        .heed{
+            text-align: center;
+            font-size: 150%;
+        }
+        .textp{
+            margin-right: 5%;
+            margin-left: 8%;
+            color: aliceblue;
+            text-align: left;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            margin: 3%;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .icon {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin: 3%;
+        }
+        .logo {
+            perspective: 800px; /* Adding perspective for 3D effect */
+        }
+
+        .logo img {
+            transition: transform 0.5s; /* Adding smooth transition */
+        }
+
+        .logo img:hover {
+            animation: rotateY 1s infinite;
+        }
+
+        @keyframes rotateY {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+        #myProgress {
+            width: 100%;
+            background-color: grey;
+            height: 30px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        #myBar {
+            width: 0%;
+            height: 100%;
+            background-color: crimson;
+            transition: width 0.5s ease;
+        }
+        .textp{
+            font-size: 70%;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: crimson;
+        }
+
+        .topnav .login-container {
+            float: right;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .login-container {
+                float: none;
+            }
+            .topnav a, .topnav input[type=text], .topnav .login-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+        .head {
+            height: 100vh;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            filter: brightness(80%);
+        }
+    </style>
+</head>
+<body class="all">
+<div class="topnav">
+    <a class="active" href="mainmenu.html">Home</a>
+</div>
+<div class="header">
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="head">
+            <div class="logo d-flex align-items-center justify-content-center">
+                <img src="circle.png" alt="">
+                <div class="logotext ml-2">
+                    <span class="title">43</span>
+                    <span class="title2">AVENUE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="heed">
+    <audio controls autoplay>
+    <source src="ost.mp3" type="audio/mpeg">
+    </audio >
+    <div class="textp">
+        <p>
+            Company 43 AVENUE was founded in 2023 by three ambitious and visionary students of Astana IT University - Yerassyl, Arai and Ernar. Their shared passion for technology and their desire to make a difference in the world led them to embark on a remarkable entrepreneurial journey.
+
+            From the early days, the three founders faced numerous challenges and obstacles, but their determination and unwavering belief in their abilities propelled them forward. They honed their programming skills, delving deep into the realms of HTML, CSS, and JavaScript. Their commitment to excellence and their relentless pursuit of knowledge set them apart from their peers.
+
+            As the company began to take shape, the trio realized the importance of collaboration and building a strong team. They recruited like-minded individuals who shared their passion for innovation and were driven to push the boundaries of what was possible. Together, they formed a dynamic and diverse team, combining their talents and expertise to deliver exceptional results.
+
+            The reputation of 43 AVENUE grew rapidly, fueled by their commitment to delivering cutting-edge solutions and providing unparalleled customer satisfaction. The company quickly gained recognition for their exceptional work in web development, mobile applications, e-commerce solutions, and digital marketing strategies.
+
+            With each successful project, 43 AVENUE expanded its client base, attracting both local and international clients from various industries. Their solutions helped businesses streamline their operations, enhance their online presence, and drive substantial growth. The company's portfolio boasted a diverse range of projects, including immersive websites, interactive mobile apps, and data-driven marketing campaigns.
+
+            To keep pace with the ever-evolving technological landscape, 43 AVENUE invested heavily in research and development. They stayed up to date with the latest trends, emerging technologies, and industry best practices. This dedication to staying ahead of the curve enabled them to offer innovative solutions that aligned with the rapidly changing needs of their clients.
+
+            Recognizing the importance of continuous learning, 43 AVENUE established a culture of knowledge-sharing and professional development within the company. They encouraged their team members to attend conferences, participate in workshops, and pursue certifications to expand their skill sets and stay at the forefront of their respective fields.
+
+            As the company grew, 43 AVENUE expanded its operations beyond its headquarters. They opened satellite offices in major cities worldwide, enabling them to serve clients on a global scale. Their international presence further solidified their reputation as a trusted technology partner.
+
+            Today, 43 AVENUE stands tall as a leading global technology company, with a dedicated team of over 500 skilled professionals. They continue to push the boundaries of innovation, leveraging emerging technologies such as artificial intelligence, machine learning, and blockchain to create transformative solutions for their clients.
+
+            Despite their remarkable success, 43 AVENUE remains committed to their core values. They actively contribute to the tech community, organizing seminars, hackathons, and mentorship programs to nurture the next generation of aspiring entrepreneurs and technologists.
+
+            In conclusion, the story of 43 AVENUE is a testament to the power of passion, perseverance, and teamwork. From humble beginnings as university students, they have built an empire driven by innovation, excellence, and a relentless pursuit of technological advancement. As they continue to evolve and adapt to the ever-changing industry, their impact on the digital landscape is set to grow even further.
+        </p>
+        <p>
+            As 43 AVENUE continued to thrive, they expanded their service offerings to meet the evolving needs of their clients. They ventured into the realm of artificial intelligence, developing sophisticated algorithms and machine learning models to empower businesses with data-driven insights and automation capabilities.
+
+            The company's commitment to innovation and pushing boundaries led them to explore emerging technologies such as virtual reality and augmented reality. They harnessed the immersive power of these technologies to create engaging user experiences, revolutionizing industries like gaming, entertainment, and education.
+
+            Recognizing the importance of cybersecurity in the digital age, 43 AVENUE established a dedicated team of experts in the field. They developed robust security protocols and conducted comprehensive vulnerability assessments to ensure their clients' digital assets remained protected from cyber threats.
+
+            In their pursuit of sustainability, 43 AVENUE embraced green technologies and incorporated environmentally friendly practices into their operations. They implemented energy-efficient solutions, reduced their carbon footprint, and actively supported initiatives that promoted a greener future.
+
+            Understanding the power of data, 43 AVENUE invested heavily in big data analytics and business intelligence. They leveraged advanced analytics tools and techniques to help their clients gain valuable insights from vast amounts of structured and unstructured data, enabling them to make informed decisions and drive business growth.
+
+            To foster innovation and collaboration, 43 AVENUE established strategic partnerships with leading technology companies, research institutions, and startups. These partnerships enabled them to access cutting-edge technologies, tap into a global network of expertise, and stay at the forefront of industry trends.
+
+            In addition to their client projects, 43 AVENUE actively contributed to open-source communities, sharing their knowledge and contributing to the development of innovative solutions. They organized hackathons and coding competitions, nurturing a culture of creativity and collaboration within the broader tech ecosystem.
+
+            As a socially responsible company, 43 AVENUE initiated numerous corporate social responsibility programs. They supported educational initiatives, providing scholarships and mentorship opportunities to aspiring students in STEM fields. They also contributed to charitable causes, leveraging their technological expertise to make a positive impact on society.
+
+            As the company expanded its global presence, they embraced cultural diversity and inclusion. They fostered a work environment that celebrated different perspectives and ideas, encouraging employees from diverse backgrounds to contribute their unique insights and experiences.
+
+            Looking ahead, 43 AVENUE remains committed to driving innovation and making a difference in the world. They continue to invest in research and development, exploring emerging technologies such as quantum computing, Internet of Things, and blockchain to shape the future of digital transformation.
+
+            In conclusion, the growth and success of 43 AVENUE are a testament to their unwavering commitment to excellence, innovation, and client satisfaction. With their diverse expertise, global reach, and a passion for pushing boundaries, they are poised to remain at the forefront of the ever-evolving technology landscape for years to come.
+        </p>
+    </div>
+</div>
+<div class="icon">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://chudo-prirody.com/uploads/posts/2021-08/thumbs/1628793168_166-p-foto-memnogo-kota-177.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>Yerassyl</h1>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://5uglov.ru/images/post/1540204942.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>Arai</h1>
+                <p>(поставьте 100)</p>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://focus.ua/static/storage/thumbs/640x325/d/94/c31cd30e-32abce0073070dd6bbc9eeb3429e194d.png?v=9328_1" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>Ernar</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+</body>
+</html>
